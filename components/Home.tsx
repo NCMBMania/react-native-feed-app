@@ -4,7 +4,8 @@ import List from './List';
 
 export default class Home extends Component {
   render() {
-    const {navigation} = this.props;
+    const {navigation, ncmb} = this.props;
+    console.log(ncmb)
     return (
       <View style={styles.container}>
         <Text style={styles.header}>ニュースのヘッダー</Text>

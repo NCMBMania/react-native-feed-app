@@ -7,10 +7,10 @@ class Detail extends React.Component {
         const item = this.props.navigation.state.params;
         return (
             <View style={styles.container}>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.date_published}>{item.date_published}</Text>
+              <Text style={styles.title}>{item.get('title')}</Text>
+              <Text style={styles.date_published}>{item.get('pubDate')}</Text>
               <ScrollView style={styles.scrollView}>
-                <HTMLView stylesheet={styles.body} value={item.content_html} />
+                <HTMLView stylesheet={styles.body} value={item.get('content')} />
               </ScrollView>
             </View>
         );
